@@ -63,7 +63,6 @@ const styles = {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		/* background-color: rgba(255, 255, 255, 0.5); */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -71,22 +70,22 @@ const styles = {
 	titleContainer: css`
 		display: grid;
 		grid-template-rows: auto auto auto;
-		/* background-color: #f00; */
 	`,
 	text: css`
 		padding-left: 10px;
-		font-size: 10rem;
+		font-size: clamp(5rem, 12vw, 10rem);
 		color: #fff;
-		/* text-align: center; */
+		user-select: none;
 	`,
 	subText: css`
 		padding-right: 10px;
-		font-size: 6rem;
+		font-size: clamp(3rem, 9vw, 6rem);
 		color: #fff;
 		text-align: right;
+		user-select: none;
 	`,
 	divider: css`
-		width: 600px;
+		width: clamp(300px, 60vw, 600px);
 		height: 2px;
 		background-color: #fff;
 	`,

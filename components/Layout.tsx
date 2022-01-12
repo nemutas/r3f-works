@@ -9,7 +9,7 @@ type LayoutProps = {
 }
 
 export const Layout: VFC<LayoutProps> = props => {
-	const { title = 'Nemutas｜Three.js Works', description = "nemutas' three.js works", children } = props
+	const { title = 'Nemutas｜Works', description = "nemutas' three.js works", children } = props
 
 	return (
 		<div css={styles.container}>

@@ -121,7 +121,7 @@ const TriangleFace: VFC<TriangleFaceProps> = props => {
 	}
 
 	const handleClick = (e: ThreeEvent<MouseEvent>) => {
-		window.open(work.link, '_blank')
+		window.open(work.link, '_blank', 'noopener noreferrer')
 	}
 
 	return (

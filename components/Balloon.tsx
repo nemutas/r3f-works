@@ -63,7 +63,7 @@ const styles = {
 		position: absolute;
 		top: 10px;
 		right: 0;
-		width: 400px;
+		width: clamp(300px, 100vw, 450px);
 		padding: 10px;
 		padding-right: 0;
 		display: grid;
@@ -73,18 +73,22 @@ const styles = {
 	`,
 	title: css`
 		padding-right: 10px;
-		font-size: 3rem;
+		font-size: clamp(2rem, 5vw, 3rem);
+		line-height: 60px;
 		color: #fff;
 		height: 0px;
 		overflow: hidden;
+		user-select: none;
 		transform: translate(0px, 60px);
 	`,
 	description: css`
 		padding-right: 10px;
-		font-size: 2rem;
+		font-size: clamp(1.5rem, 3vw, 2rem);
 		color: #fff;
 		height: 0px;
+		white-space: pre-line;
 		overflow: hidden;
+		user-select: none;
 		transform: translate(0px, -20px);
 	`,
 	divider: css`
