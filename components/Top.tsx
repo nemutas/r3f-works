@@ -7,24 +7,28 @@ import { setCursor } from '../common/utils';
 export const Top: VFC = () => {
 	const containerRef = useRef<HTMLDivElement>(null)
 
+	const scrollAnimation = () => {
+		gsap.to('.anime-top', {
+			y: '-100%',
+			duration: 1,
+			ease: 'power2.in',
+			onComplete: () => {
+				applicationState.isTop = false
+				setCursor('light')
+			}
+		})
+	}
+
 	useEffect(() => {
 		containerRef.current!.onmousemove = () => {
 			setCursor('auto')
 		}
 		containerRef.current!.onwheel = e => {
 			if (0 < e.deltaY) {
-				gsap.to('.anime-top', {
-					y: '-100%',
-					duration: 1,
-					ease: 'power2.in',
-					onComplete: () => {
-						applicationState.isTop = false
-						setCursor('light')
-					}
-				})
+				scrollAnimation()
 			}
 		}
-	})
+	}, [])
 
 	return (
 		<div ref={containerRef} css={styles.container} className="anime-top">
@@ -35,7 +39,7 @@ export const Top: VFC = () => {
 				<div css={styles.subText}>Works</div>
 			</div>
 			{/* scroller */}
-			<div css={styles.scrollContainer}>
+			<div css={styles.scrollContainer} onClick={scrollAnimation}>
 				<div css={styles.scrollbarAnimationContainer}>
 					<div css={styles.scrollbar} />
 				</div>
