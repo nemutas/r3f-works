@@ -8,8 +8,6 @@ export const Top: VFC = () => {
 	const containerRef = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
-		containerRef.current!.classList.add('anime-top')
-
 		containerRef.current!.onmousemove = () => {
 			setCursor('auto')
 		}
@@ -21,6 +19,7 @@ export const Top: VFC = () => {
 					ease: 'power2.in',
 					onComplete: () => {
 						applicationState.isTop = false
+						setCursor('light')
 					}
 				})
 			}
@@ -28,7 +27,7 @@ export const Top: VFC = () => {
 	})
 
 	return (
-		<div ref={containerRef} css={styles.container}>
+		<div ref={containerRef} css={styles.container} className="anime-top">
 			{/* <div css={styles.titleContainer}></div> */}
 			<div css={styles.titleContainer}>
 				<div css={styles.text}>Nemutas</div>

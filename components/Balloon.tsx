@@ -9,18 +9,11 @@ import { works } from '../resources/works';
 export const Balloon: VFC = () => {
 	const snap = useSnapshot(icosaState)
 	const appSnap = useSnapshot(applicationState)
-
 	const [isInit, setInit] = useState(appSnap.isDistortion)
 
 	const containerRef = useRef<HTMLDivElement>(null)
-	const titleRef = useRef<HTMLDivElement>(null)
-	const descriptionRef = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
-		containerRef.current!.classList.add('anime-balloon-container')
-		titleRef.current!.classList.add('anime-balloon-title')
-		descriptionRef.current!.classList.add('anime-balloon-description')
-
 		containerRef.current!.onmouseenter = () => setCursor('auto')
 		containerRef.current!.onmouseleave = () => setCursor('light')
 	}, [])
@@ -46,12 +39,12 @@ export const Balloon: VFC = () => {
 	}, [snap.frontFace, isInit])
 
 	return (
-		<div ref={containerRef} css={styles.container}>
-			<div ref={titleRef} css={styles.title}>
+		<div ref={containerRef} css={styles.container} className="anime-balloon-container">
+			<div css={styles.title} className="anime-balloon-title">
 				{works[snap.frontFace].title}
 			</div>
 			<div css={styles.divider} />
-			<div ref={descriptionRef} css={styles.description}>
+			<div css={styles.description} className="anime-balloon-description">
 				{works[snap.frontFace].description}
 			</div>
 		</div>

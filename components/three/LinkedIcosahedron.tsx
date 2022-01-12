@@ -164,8 +164,6 @@ float Fresnel(vec3 eyeVector, vec3 worldNormal) {
 
 void main() {
   vec2 uv = v_uv;
-  // uv.x *= 315.0 / 600.0;
-  // uv.x += 0.2375; // ((600 - 315) / 2) / 600
 
   vec4 texture = texture2D(u_texture, uv);
 

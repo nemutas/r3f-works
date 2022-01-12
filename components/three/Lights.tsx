@@ -30,8 +30,8 @@ export const Lights: VFC = () => {
 		<>
 			<ambientLight intensity={0.2} color="#ff006e" />
 			<mesh ref={lightMeshRef}>
-				<sprite ref={spriteRef} scale={0.2}>
-					<spriteMaterial map={cursorTexture} color="#f00" />
+				<sprite ref={spriteRef} scale={0.25}>
+					<spriteMaterial map={cursorTexture} color="#ff006e" />
 				</sprite>
 				<pointLight
 					color="#ff006e"
