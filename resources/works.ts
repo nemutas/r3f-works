@@ -26,7 +26,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Homunculus Effect',
 		thumbnail: 'homunculus_effect',
 		description: `Post-processingを使用したアプリケーションです。
-    「株式会社ホムンクルス」のサイトで使用されている、Distortion Effect（ねじれ効果）・Ripple Effect（波紋効果）を実装しました。`,
+    Distortion Effect（ねじれ効果）によって、Planeの形状を流動的な形状にしています。また、Ripple Effect（波紋効果）によって、マウスに追従するように波紋を作っています。`,
 		link: 'https://nemutas.github.io/r3f-homunculus/',
 		github: 'https://github.com/nemutas/r3f-homunculus',
 		qiita: 'https://qiita.com/nemutas/items/b052af50776a8fcc1593'
@@ -36,7 +36,7 @@ export const works: { [key: string]: Work } = {
 		title: '蠕動 - Zendo -',
 		thumbnail: 'zendo',
 		description: `Shaderを使用したアプリケーションです。
-		球体の頂点にサイン波を与えて、有機的な動きを表現しました。`,
+		Sphereの頂点にサイン波を与えて、有機的な動きを表現しています。`,
 		link: 'https://nemutas.github.io/r3f-zendo/',
 		github: 'https://github.com/nemutas/r3f-zendo',
 		qiita: 'https://qiita.com/nemutas/items/38a33130e8bf3564769f'
@@ -46,16 +46,16 @@ export const works: { [key: string]: Work } = {
 		title: 'Striped Pattern Sphere',
 		thumbnail: 'striped_pattern_sphere',
 		description: `Shaderを使用したアプリケーションです。
-		球体にDistortion Effect（ねじれ効果）を使用することで、縞模様をランダムにアニメーションさせています。`,
+		Sphereの透明度にDistortion Effect（ねじれ効果）を使用することで、縞模様をランダムにアニメーションさせています。`,
 		link: 'https://mrnqk.csb.app/',
 		sandbox: 'https://codesandbox.io/s/striped-pattern-sphere-using-shader-with-r3f-mrnqk'
 	},
 	// 6
 	work6: {
-		title: 'Godrays Effect',
+		title: 'GodRays',
 		thumbnail: 'godrays_effect',
 		description: `Post-processingを使用したアプリケーションです。
-		GodRays Effectを使用して、3Dモデルから後光が挿すような表現をしました。`,
+		GodRays Effectを使用して、3Dモデルから後光が挿すような表現をしています。`,
 		link: 'https://nemutas.github.io/r3f-godrays-effect/',
 		github: 'https://github.com/nemutas/r3f-godrays-effect',
 		qiita: 'https://qiita.com/nemutas/items/541fad4db8c5f3221a68'
@@ -65,7 +65,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Mixamo Animation',
 		thumbnail: 'mixamo_animation',
 		description: `glbファイルを使用したアプリケーションです。
-		Adobe Mixamoから3Dモデル・アニメーションをインポートして、コントローラーで制御できるようにしました。`,
+		Adobe Mixamoから3Dモデル・アニメーションをインポートして、コントローラーで制御できるようしています。`,
 		link: 'https://nemutas-mixamo-animation.web.app/',
 		github: 'https://github.com/nemutas/app-mixamo-animation',
 		qiita: 'https://qiita.com/nemutas/items/6202b3f8458376ab79b6'
@@ -75,7 +75,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Morph Cube',
 		thumbnail: 'morph_cube',
 		description: `glbファイルを使用したアプリケーションです。
-		BlenderのShape Keyを設定したCubeをインポートして、モーフィングさせました。`,
+		BlenderのShape Keyを設定したCubeをインポートして、モーフィングさせています。`,
 		link: 'https://01rs0.csb.app/',
 		sandbox: 'https://codesandbox.io/s/morphing-glb-mesh-01rs0',
 		qiita: 'https://qiita.com/nemutas/items/67e6236921e21e84fdac'
@@ -85,7 +85,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Legoman Designer',
 		thumbnail: 'legoman_designer',
 		description: `glbファイルを使用したアプリケーションです。
-		BlenderでモデリングしたLego人形をインポートして、頭や胴体などの色・光沢・粗さを変えられるようにしました。`,
+		BlenderでモデリングしたLego人形をインポートして、頭や胴体などの色・光沢・粗さを変えられるようにしています。`,
 		link: 'https://nemutas.github.io/app-legoman-designer/',
 		github: 'https://github.com/nemutas/app-legoman-designer',
 		qiita: 'https://qiita.com/nemutas/items/27a8e961dd8f65360b0b'
@@ -104,8 +104,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Twisted Colorful Shpere',
 		thumbnail: 'twisted_colorful_shpere',
 		description: `Shaderを使用したアプリケーションです。
-		球体の頂点をツイストさせ、さらにPerlinノイズを与えています。
-		`,
+		Sphereの頂点をツイストさせ、さらにPerlinノイズを与えることで渦を巻くような表現をしています。`,
 		link: 'https://vhjr1.csb.app/',
 		sandbox: 'https://codesandbox.io/s/twisted-colorful-sphere-using-vertexshader-with-r3f-vhjr1'
 	},
@@ -114,7 +113,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Fluffy Sphere',
 		thumbnail: 'fluffy_sphere',
 		description: `Shaderを使用したアプリケーションです。
-		球体の頂点をSimplexノイズで変形させています。ふわふわした球体を表現しました。`,
+		Sphereの頂点をSimplexノイズで変形させて、ふわふわしたSphereを表現しています。`,
 		link: 'https://yelco.csb.app/',
 		sandbox: 'https://codesandbox.io/s/snoise-sphere-using-vertexshader-with-r3f-yelco'
 	},
@@ -123,7 +122,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Glow Wave',
 		thumbnail: 'glow_wave',
 		description: `Displacement Textureを使用したアプリケーションです。
-		中心から波紋が広がるようなCanvasをTextureに割り当てて、Planeに波を起こしています。UnrealBloom Effectを使用して、発光させています。`,
+		中心から波紋が広がるようなCanvasをDisplacementに割り当てて、Planeに波を起こしています。UnrealBloom Effectを使用して、発光させています。`,
 		link: 'https://x4o3q.csb.app/',
 		sandbox: 'https://codesandbox.io/s/wave-plane-with-displacement-map-x4o3q'
 	},
@@ -132,7 +131,7 @@ export const works: { [key: string]: Work } = {
 		title: 'Fisheye Lens',
 		thumbnail: 'fisheye_lens',
 		description: `Shaderを使用したアプリケーションです。
-		Planeの頂点をマウス位置からの距離によって拡大することによって、魚眼レンズのような表現を実装しました。`,
+		Planeの頂点をマウス位置からの距離によって拡大することによって、魚眼レンズのような表現をさせています。`,
 		link: 'https://jimpy.csb.app/',
 		sandbox: 'https://codesandbox.io/s/fisheye-lens-using-vertexshader-with-r3f-jimpy',
 		qiita: 'https://qiita.com/nemutas/items/386c4079343b0cdf2f31'

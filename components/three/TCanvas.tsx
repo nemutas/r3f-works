@@ -16,6 +16,7 @@ export default function TCanvas() {
 				near: 0.1,
 				far: 2000
 			}}
+			dpr={window.devicePixelRatio}
 			shadows>
 			{/* scene */}
 			<color attach="background" args={['#000']} />
