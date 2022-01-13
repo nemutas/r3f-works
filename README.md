@@ -12,6 +12,3 @@ Three.js（React Three Fiber）を使用した作品を、紹介するために�
 * Styling：[@emotion/react](https://emotion.sh/docs/@emotion/react)
 * Animation：[GSAP](https://greensock.com/)
 * Modeling：[Blender](https://www.blender.org/)
-
-# Detail
-サイトのICO球の作成方法について、Qiitaでまとめています。<br>
