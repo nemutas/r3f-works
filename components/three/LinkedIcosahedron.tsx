@@ -88,7 +88,7 @@ export const LinkedIcosahedron: VFC<JSX.IntrinsicElements['group']> = props => {
 	)
 }
 
-// ========================================================
+// --------------------------------------------------------
 type TriangleFaceProps = {
 	geometry: THREE.BufferGeometry
 	accessKey: string
@@ -136,6 +136,9 @@ const TriangleFace: VFC<TriangleFaceProps> = props => {
 	)
 }
 
+// --------------------------------------------------------
+// shader
+
 const vertexShader = `
 varying vec2 v_uv;
 varying vec3 v_normal;
@@ -163,9 +166,7 @@ float Fresnel(vec3 eyeVector, vec3 worldNormal) {
 }
 
 void main() {
-  vec2 uv = v_uv;
-
-  vec4 texture = texture2D(u_texture, uv);
+  vec4 texture = texture2D(u_texture, v_uv);
 
   // fresnel reflect
   float fresnel = Fresnel(v_mvPos, v_normal) * 0.5;

@@ -32,7 +32,6 @@ export const Top: VFC = () => {
 
 	return (
 		<div ref={containerRef} css={styles.container} className="anime-top">
-			{/* <div css={styles.titleContainer}></div> */}
 			<div css={styles.titleContainer}>
 				<div css={styles.text}>Nemutas</div>
 				<div css={styles.divider} />
@@ -47,6 +46,9 @@ export const Top: VFC = () => {
 		</div>
 	)
 }
+
+// --------------------------------------------------------
+// styles
 
 const animation = {
 	scloll: keyframes`

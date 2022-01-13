@@ -10,7 +10,6 @@ export class Mouse3D {
 	}
 
 	get position() {
-		// https://github.com/edankwan/The-Spirit/blob/master/src/index.js#L251
 		this._camera.updateMatrixWorld()
 		this._ray.origin.setFromMatrixPosition(this._camera.matrixWorld)
 		this._ray.direction.set(this._mouse.x, this._mouse.y, 0.5).unproject(this._camera).sub(this._ray.origin).normalize()

@@ -62,6 +62,8 @@ export const DistortionPass: VFC<DistortionPassType> = props => {
 }
 
 // --------------------------------------------------------
+// shader
+
 const vertexShader = `
 varying vec2 v_uv;
 

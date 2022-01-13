@@ -24,6 +24,9 @@ export const Layout: VFC<LayoutProps> = props => {
 	)
 }
 
+// --------------------------------------------------------
+// styles
+
 const styles = {
 	container: css`
 		position: relative;

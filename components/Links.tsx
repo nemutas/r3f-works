@@ -44,6 +44,7 @@ export const Links: VFC = () => {
 	)
 }
 
+// --------------------------------------------------------
 type LinkIconProps = {
 	href?: string
 	children: React.ReactNode
@@ -58,6 +59,9 @@ const LinkIcon: VFC<LinkIconProps> = props => {
 		</a>
 	)
 }
+
+// --------------------------------------------------------
+// styles
 
 const styles = {
 	container: css`

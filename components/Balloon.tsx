@@ -51,6 +51,9 @@ export const Balloon: VFC = () => {
 	)
 }
 
+// --------------------------------------------------------
+// styles
+
 const styles = {
 	container: css`
 		position: absolute;

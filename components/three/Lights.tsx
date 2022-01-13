@@ -15,6 +15,8 @@ export const Lights: VFC = () => {
 	const { camera } = useThree()
 	const mouse3d = useMemo(() => new Mouse3D(camera), [camera])
 
+	const lightColor = '#ff006e'
+
 	setCursor('light')
 
 	useEffect(() => {
@@ -28,13 +30,13 @@ export const Lights: VFC = () => {
 
 	return (
 		<>
-			<ambientLight intensity={0.2} color="#ff006e" />
+			<ambientLight intensity={0.2} color={lightColor} />
 			<mesh ref={lightMeshRef}>
 				<sprite ref={spriteRef} scale={0.25}>
-					<spriteMaterial map={cursorTexture} color="#ff006e" />
+					<spriteMaterial map={cursorTexture} color={lightColor} />
 				</sprite>
 				<pointLight
-					color="#ff006e"
+					color={lightColor}
 					intensity={1}
 					distance={10}
 					decay={10}
