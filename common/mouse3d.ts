@@ -28,7 +28,7 @@ export class Mouse3D {
 
 	private _handleTouchMove = (e: TouchEvent) => {
 		e.preventDefault()
-		const [x, y] = [e.touches[0].clientX, e.touches[0].clientY]
+		const [x, y] = [e.touches[0].pageX, e.touches[0].pageY]
 		this._mouse.x = (x / window.innerWidth) * 2 - 1
 		this._mouse.y = -(y / window.innerHeight) * 2 + 1
 	}
