@@ -6,6 +6,7 @@ export class Mouse3D {
 
 	constructor(private _camera: THREE.Camera) {
 		document.addEventListener('mousemove', this._handleMouseMove)
+		document.addEventListener('touchmove', this._handleTouchMove)
 	}
 
 	get position() {
@@ -20,11 +21,20 @@ export class Mouse3D {
 	}
 
 	private _handleMouseMove = (e: MouseEvent) => {
+		e.preventDefault()
 		this._mouse.x = (e.pageX / window.innerWidth) * 2 - 1
 		this._mouse.y = -(e.pageY / window.innerHeight) * 2 + 1
 	}
 
+	private _handleTouchMove = (e: TouchEvent) => {
+		e.preventDefault()
+		const [x, y] = [e.touches[0].clientX, e.touches[0].clientY]
+		this._mouse.x = (x / window.innerWidth) * 2 - 1
+		this._mouse.y = -(y / window.innerHeight) * 2 + 1
+	}
+
 	dispose = () => {
 		document.removeEventListener('mousemove', this._handleMouseMove)
+		document.removeEventListener('touchmove', this._handleTouchMove)
 	}
 }
