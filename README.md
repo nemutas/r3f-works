@@ -7,7 +7,8 @@ Three.js（React Three Fiber）を使用した作品を、紹介するために�
 
 # Technology
 * Language：TypeScript・GLSL
-* Framework：Next.js
+* Framework：[Next.js](https://nextjs.org/)
+* Hosting：Versel
 * Graphics：[React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
 * Styling：[@emotion/react](https://emotion.sh/docs/@emotion/react)
 * Animation：[GSAP](https://greensock.com/)
