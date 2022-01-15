@@ -38,7 +38,7 @@ export const Lights: VFC = () => {
 				<pointLight
 					color={lightColor}
 					intensity={1}
-					distance={10}
+					distance={15}
 					decay={10}
 					castShadow
 					shadow-mapSize-width={1024}
