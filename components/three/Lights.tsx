@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, VFC } from 'react';
 import * as THREE from 'three';
-import { Icosahedron, Plane, Point, PointMaterial, Points, useTexture } from '@react-three/drei';
+import { useTexture } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Mouse3D } from '../../common/mouse3d';
 import { cursor } from '../../common/store';
@@ -30,7 +30,7 @@ export const Lights: VFC = () => {
 
 	return (
 		<>
-			<ambientLight intensity={0.2} color={lightColor} />
+			<ambientLight intensity={0.05} color={lightColor} />
 			<mesh ref={lightMeshRef}>
 				<sprite ref={spriteRef} scale={0.25}>
 					<spriteMaterial map={cursorTexture} color={lightColor} />
@@ -38,8 +38,8 @@ export const Lights: VFC = () => {
 				<pointLight
 					color={lightColor}
 					intensity={1}
-					distance={15}
-					decay={10}
+					distance={10}
+					decay={20}
 					castShadow
 					shadow-mapSize-width={1024}
 					shadow-mapSize-height={1024}

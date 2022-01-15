@@ -169,10 +169,10 @@ void main() {
   vec4 texture = texture2D(u_texture, v_uv);
 
   // fresnel reflect
-  float fresnel = Fresnel(v_mvPos, v_normal) * 0.5;
+  float fresnel = Fresnel(v_mvPos, v_normal) * 0.1;
   vec4 color = mix(texture, vec4(1.0), fresnel);
 
-  gl_FragColor = color;
+	gl_FragColor = sRGBToLinear(color);
   // gl_FragColor = vec4(vec3(fresnel), 1.0);
 }
 `
